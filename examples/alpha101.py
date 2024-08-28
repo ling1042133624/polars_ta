@@ -86,3 +86,5 @@ def func_ts_date(df: pl.DataFrame) -> pl.DataFrame:
 df = df.group_by('asset').map_groups(func_ts_date)
 
 print(df)
+df.head(10).write_csv('df.csv')
+
